@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ERP Dimarmore — Demonstrativo da Abertura do Pedido</title>
+    <link rel="icon" href="assets/img/DMicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/sb-admin-2.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/exato.css">
+</head>
+<body id="page-top">
+<div id="wrapper">
+    <aside class="navbar-nav menu-lateral sidebar sidebar-dark accordion" id="accordionSidebar">
+        <a class="marca-demo" href="#liberacoes" aria-label="Página inicial do demonstrativo">
+            <img src="assets/img/DMicon.png" alt="Di Marmore">
+        </a>
+        <hr class="sidebar-divider my-0">
+        <nav id="menuSetores">
+            <div class="nav-item menu-grupo"><a class="nav-link menu-grupo-toggle" href="#"><i class="fas fa-handshake"></i><span>COMERCIAL</span></a><div class="menu-sub"><a href="#consulta_comercial" data-page="consulta_comercial">BASE DEPARTAMENTAL PARA OBRA</a></div></div>
+            <div class="nav-item menu-grupo"><a class="nav-link menu-grupo-toggle" href="#"><i class="fas fa-hard-hat"></i><span>OBRAS</span></a><div class="menu-sub"><a href="#consulta_operacoes" data-page="consulta_operacoes">BASE DEPARTAMENTAL PARA OBRA</a></div></div>
+            <div class="nav-item menu-grupo"><a class="nav-link menu-grupo-toggle" href="#"><i class="fas fa-gem"></i><span>ROCHAS</span></a><div class="menu-sub"><a href="#consulta_rochas" data-page="consulta_rochas">BASE DEPARTAMENTAL PARA OBRA</a></div></div>
+            <div class="nav-item menu-grupo"><a class="nav-link menu-grupo-toggle" href="#"><i class="fas fa-boxes"></i><span>SUPRIMENTOS</span></a><div class="menu-sub"><a href="#consulta_suprimentos" data-page="consulta_suprimentos">BASE DEPARTAMENTAL PARA OBRA</a></div></div>
+            <div class="nav-item menu-grupo"><a class="nav-link menu-grupo-toggle" href="#"><i class="fas fa-dollar-sign"></i><span>FINANCEIRO</span></a><div class="menu-sub"><a href="#consulta_financeiro" data-page="consulta_financeiro">BASE DEPARTAMENTAL PARA OBRA</a></div></div>
+            <div class="nav-item menu-grupo"><a class="nav-link menu-grupo-toggle" href="#"><i class="fas fa-chart-line"></i><span>CUSTOS</span></a><div class="menu-sub"><a href="#consulta_custos" data-page="consulta_custos">BASE DEPARTAMENTAL PARA OBRA</a></div></div>
+            <div class="nav-item menu-grupo"><a class="nav-link menu-grupo-toggle" href="#"><i class="fas fa-industry"></i><span>PRODUÇÃO</span></a><div class="menu-sub"><a href="#consulta_producao" data-page="consulta_producao">BASE DEPARTAMENTAL PARA OBRA</a></div></div>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">CADASTROS</div>
+            <div class="nav-item menu-grupo"><a class="nav-link menu-grupo-toggle" href="#"><i class="fas fa-fw fa-folder"></i><span>CADASTROS</span></a><div class="menu-sub aberto"><a href="#pedidos" data-page="pedidos">PEDIDOS</a><a href="#liberacoes" data-page="liberacoes">LIBERAÇÕES DE PEDIDOS</a></div></div>
+        </nav>
+        <div class="text-center d-none d-md-inline mt-auto mb-3"><button class="rounded-circle border-0" id="sidebarToggle" title="Recolher menu"></button></div>
+    </aside>
+
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"><i class="fa fa-bars"></i></button>
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" onsubmit="return false"><div class="input-group"><input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar..." aria-label="Pesquisar"><div class="input-group-append"><button class="btn btn-primary" type="button"><i class="fas fa-search fa-sm"></i></button></div></div></form>
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item dropdown no-arrow mx-1"><a class="nav-link" href="#"><i class="fas fa-bell fa-fw"></i><span class="badge badge-danger badge-counter">3+</span></a></li>
+                    <li class="nav-item dropdown no-arrow mx-1"><a class="nav-link" href="#"><i class="fas fa-envelope fa-fw"></i></a></li>
+                    <div class="topbar-divider d-none d-sm-block"></div>
+                    <li class="nav-item mr-2"><button type="button" class="btn btn-link nav-link" id="alternarTema" title="Alternar modo claro e escuro"><i class="fas fa-moon"></i></button></li>
+                    <li class="nav-item"><span class="nav-link"><i class="fas fa-user-circle fa-fw mr-1"></i><span class="d-none d-lg-inline">DEMONSTRAÇÃO</span></span></li>
+                </ul>
+            </nav>
+
+            <main class="container-fluid pb-5" id="app" aria-live="polite"></main>
+        </div>
+        <footer class="sticky-footer bg-white rodape"><div class="container my-auto"><div class="copyright text-center my-auto"><span>ERP Dimarmore — ambiente demonstrativo sem conexão com o banco de dados</span></div></div></footer>
+    </div>
+</div>
+
+<div class="toast-demo" id="toastDemo" role="status"><i class="fas fa-check-circle mr-2"></i><span></span></div>
+<div class="modal-demo" id="modalDemo" aria-hidden="true"><div class="modal-demo-dialog"><div class="modal-demo-header"><strong id="modalTitulo">DEMONSTRATIVO</strong><button type="button" class="close" data-fechar-modal>&times;</button></div><div class="modal-demo-body" id="modalConteudo"></div><div class="modal-demo-footer"><button class="btn btn-secondary" data-fechar-modal>FECHAR</button><button class="btn btn-primary" id="modalConfirmar">CONFIRMAR</button></div></div></div>
+
+<script src="assets/js/exato.js"></script>
+</body>
+</html>
